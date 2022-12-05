@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="647.0" prefWidth="900.0" style="-fx-background-color: Moccasin;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modules.core.fxmlcontrollers.employee.EmployeeMenuController">
+    <children>
+      <ImageView fitHeight="665.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../images/userMenu.jpg" />
+         </image>
+      </ImageView>
+        <TitledPane animated="false" layoutY="40.0" prefWidth="359.0" text="Личные данные" AnchorPane.leftAnchor="0.0">
+            <content>
+                <TabPane prefHeight="179.0" prefWidth="342.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Основные данные">
+                            <content>
+                                <AnchorPane prefHeight="116.0" prefWidth="285.0" style="-fx-background-color: LightSteelBlue;">
+                                    <children>
+                                        <GridPane layoutX="6.0" layoutY="11.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="129.0" prefWidth="341.0" style="-fx-background-color: LightSteelBlue;" AnchorPane.leftAnchor="6.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="132.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.99999237060547" minWidth="10.0" prefWidth="99.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label fx:id="emailLabel" text="Почта" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label text="  ФИО" GridPane.rowIndex="1" />
+                                                <Label fx:id="nameLabel" text="ФИО" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label text="  Почта" GridPane.rowIndex="2" />
+                                                <Label text="  id:" />
+                                                <Label fx:id="idLabel" text="id" GridPane.columnIndex="1" />
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Прочее">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: LightSteelBlue;">
+                                    <children>
+                                        <GridPane layoutX="39.0" layoutY="-10.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="92.0" prefWidth="285.0" style="-fx-background-color: LightSteelBlue;" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label fx:id="levelLabel" text="Уровень" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label text="  Логин" />
+                                                <Label fx:id="loginLabel" text="Логин" GridPane.columnIndex="1" />
+                                                <Label text="  Уровень" GridPane.rowIndex="1" />
+                                            </children>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="60.00000190734863" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.99999237060547" minWidth="10.0" prefWidth="170.99999809265137" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                        </GridPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </content>
+        </TitledPane>
+      <Accordion layoutX="369.0" layoutY="40.0" prefHeight="206.0" prefWidth="528.0" AnchorPane.rightAnchor="0.0">
+        <panes>
+          <TitledPane animated="false" prefHeight="179.0" prefWidth="522.0" text="Записаться на тренинг">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="198.0" prefWidth="530.0" style="-fx-background-color: LightSteelBlue;">
+                     <children>
+                        <GridPane maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="95.0" prefWidth="345.0" style="-fx-background-color: LightSteelBlue;">
+                           <children>
+                              <Label prefHeight="48.0" prefWidth="119.0" text="  Комментарий" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" />
+                              <TextField fx:id="commentForReceiptText" onAction="#getCommentForReceiptText" promptText="Комментарий" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="  Дата" />
+                              <DatePicker fx:id="dateReceiptText" onAction="#getDateReceiptText" prefHeight="32.0" prefWidth="198.0" promptText="дд.мм.гггг" GridPane.columnIndex="1" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="148.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.99999237060547" minWidth="10.0" prefWidth="177.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <Button fx:id="confirmTrainingButton" layoutX="149.0" layoutY="95.0" mnemonicParsing="false" onAction="#confirmTraining" text="Записаться" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <MenuBar layoutY="2.0" prefHeight="16.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Выход">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#comeBack" text="Выйти из аккаунта" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Изменить">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#changeDetails" text="Изменить аккаунт" />
+                  <MenuItem mnemonicParsing="false" onAction="#deleteAccount" text="Удалить аккаунт" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false">
+               <graphic>
+                    <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="2.0" prefWidth="600.0" text="Меню сотрудника">
+                        <font>
+                            <Font name="Calibri Italic" size="28.0" />
+                        </font>
+                    </Label>
+               </graphic>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Accordion layoutY="305.0" prefHeight="260.0" prefWidth="900.0" AnchorPane.bottomAnchor="85.25" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <panes>
+            <TitledPane animated="false" prefHeight="148.0" prefWidth="900.0" text="Просмотреть все тренинги">
+               <content>
+                  <AnchorPane prefHeight="244.0" prefWidth="372.0" style="-fx-background-color: LightSteelBlue;">
+                     <children>
+                        <TableView fx:id="trainingTableView" layoutX="7.6" layoutY="79.6" prefHeight="76.0" prefWidth="903.0" style="-fx-background-color: LightSteelBlue;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="-12.0" AnchorPane.rightAnchor="-12.0" AnchorPane.topAnchor="20.0">
+                          <columns>
+                            <TableColumn fx:id="trainingNameColumn" prefWidth="281.60003662109375" text="Название тренинга" />
+                              <TableColumn fx:id="trainingDateColumn" prefWidth="300.00006103515625" text="Дата" />
+                              <TableColumn fx:id="trainingPlaceColumn" minWidth="0.0" prefWidth="323.20001220703125" text="Количество свободных мест" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="findButton" layoutX="185.0" layoutY="2.0" mnemonicParsing="false" onAction="#findTrainings" prefHeight="9.0" prefWidth="59.0" text="Поиск" />
+                        <DatePicker fx:id="findDateButton" layoutX="-2.0" layoutY="2.0" prefHeight="26.0" prefWidth="166.0" promptText="дд.мм.гггг" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="147.0" prefWidth="900.0" text="Просмотреть мои записи на тренинги">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="212.0" prefWidth="898.0" style="-fx-background-color: LightSteelBlue;">
+                     <children>
+                          <TableView fx:id="myTrainingsTable" layoutX="-2.4000000000000004" layoutY="-1.4000000000000004" prefHeight="342.0" prefWidth="900.0" style="-fx-background-color: LightSteelBlue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-12.0" AnchorPane.rightAnchor="-12.0" AnchorPane.topAnchor="-11.0">
+                              <columns>
+                                  <TableColumn fx:id="myTrainingNameColumn" prefWidth="255.20001220703125" text="Название тренинга" />
+                                  <TableColumn fx:id="myTrainingDateColumn" prefWidth="356.800048828125" text="Дата" />
+                                  <TableColumn fx:id="myTrainingCommentColumn" prefWidth="292.79998779296875" text="Комментарий" />
+                              </columns>
+                          </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="147.0" prefWidth="900.0" text="Просмотреть отзывы обо мне">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="212.0" prefWidth="898.0" style="-fx-background-color: LightSteelBlue;">
+                     <children>
+                        <TableView fx:id="reviewsAboutMeTable" layoutX="-2.4000000000000004" layoutY="-1.4000000000000004" prefHeight="342.0" prefWidth="900.0" style="-fx-background-color: LightSteelBlue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-12.0" AnchorPane.rightAnchor="-12.0" AnchorPane.topAnchor="-11.0">
+                           <columns>
+                              <TableColumn fx:id="managerFIOColumn" prefWidth="302.4000244140625" text="ФИО руководителя" />
+                              <TableColumn fx:id="markColumn" prefWidth="218.4000244140625" text="Оценка" />
+                              <TableColumn fx:id="commentColumn" prefWidth="389.60003662109375" text="Комментарий" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+    </children>
+</AnchorPane>
