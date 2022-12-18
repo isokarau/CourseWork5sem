@@ -25,4 +25,5 @@ public class Constants {
     public static final String CREATE_REVIEW = "CREATE_REVIEW";
 
     public static final String PROMOTE_EMPLOYEE = "PROMOTE_EMPLOYEE";
+    public static final String FIRE_EMPLOYEE = "FIRE_EMPLOYEE";
 }

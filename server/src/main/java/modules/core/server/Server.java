@@ -13,6 +13,8 @@ public class Server {
             serverSocket = new ServerSocket(8080);
             serverSocket.setReuseAddress(true);
 
+            System.out.println("Server is running");
+
             while (true) {
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("New client connected " + clientSocket.getInetAddress().getHostAddress());

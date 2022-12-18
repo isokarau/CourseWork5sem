@@ -126,7 +126,7 @@
           <Menu mnemonicParsing="false" text="Изменить">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#changeDetails" text="Изменить аккаунт" />
-                  <MenuItem mnemonicParsing="false" onAction="#deleteAccount" text="Удалить аккаунт" />
+                  <MenuItem mnemonicParsing="false" onAction="#deleteAccount" text="Уволиться" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false">

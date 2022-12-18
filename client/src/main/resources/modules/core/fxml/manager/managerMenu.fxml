@@ -29,20 +29,6 @@
         </ImageView>
         <Accordion layoutY="299.0" prefHeight="930.0" prefWidth="900.0" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="299.0">
             <panes>
-            <TitledPane animated="false" prefHeight="200.0" prefWidth="200.0" text="Просмотреть отклоненные заказы">
-               <content>
-                  <TableView fx:id="rejectRequestTableView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LightSteelBlue;">
-                    <columns>
-                      <TableColumn fx:id="userNameColumnRejectRequestTableView" prefWidth="132.0" text="email пользователя" />
-                        <TableColumn fx:id="phoneNumberUserColumnRejectRequestTableView" prefWidth="148.0" text="Номер телефона пользователя" />
-                      <TableColumn fx:id="adminNameColumnRejectRequestTableView" prefWidth="124.0" text="email сотрудника" />
-                        <TableColumn fx:id="startDateColumnRejectRequestTableView" prefWidth="180.0" text="Дата формирования заявки" />
-                        <TableColumn fx:id="reasonColumnRejectRequestTableView" prefWidth="137.0" text="Причина" />
-                        <TableColumn fx:id="definitionColumnRejectRequestTableView" prefWidth="177.0" text="Описание заявки" />
-                    </columns>
-                  </TableView>
-               </content>
-            </TitledPane>
             <TitledPane animated="false" prefHeight="200.0" prefWidth="200.0" text="Просмотр сотрудников">
                <content>
                   <TableView fx:id="employeesTableView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LightSteelBlue;">
@@ -70,12 +56,6 @@
                         <MenuItem mnemonicParsing="false" onAction="#deleteAccount" text="Удалить аккаунт" />
                     </items>
                 </Menu>
-            <Menu mnemonicParsing="false" text="Функции">
-              <items>
-                <MenuItem mnemonicParsing="false" onAction="#showGraphic" text="График зарплат" />
-                  <MenuItem mnemonicParsing="false" onAction="#showDiagram" text="Диаграмма " />
-              </items>
-            </Menu>
                 <Menu mnemonicParsing="false">
                     <graphic>
                         <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="600.0" text="Меню руководителя">
@@ -89,7 +69,7 @@
         </MenuBar>
       <Accordion layoutY="40.0" prefHeight="213.0" prefWidth="416.0">
         <panes>
-            <TitledPane animated="false" style="-fx-background-color: LightSteelBlue;" text="Блокировка аккаунта сотрудника">
+            <TitledPane animated="false" style="-fx-background-color: LightSteelBlue;" text="Уволить сотрудника">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: LightSteelBlue;">
                      <children>

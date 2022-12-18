@@ -168,9 +168,27 @@ public class ManagerMenuController {
         Main.setRoot("fxml/start/mainWindow");
     }
 
+
+    String getEmployeeIdForBlock() {
+        return Common.Trim(employeeIdForBlock.getText());
+    }
+
     @FXML
     void confirmBlockEmployee(ActionEvent event) {
+        if (getEmployeeIdForBlock().isEmpty() || !Common.validateNumber(getEmployeeIdForBlock())) {
+            Common.makeAlert(Alert.AlertType.ERROR, "Ошибка", "Проверьте корректность введенных данных");
+        } else {
+            Session.SendMessageToServer(Constants.FIRE_EMPLOYEE);
 
+            Session.SendMessageToServer(String.valueOf(getEmployeeIdForBlock()));
+
+            String statusCode = Session.GetMessageFromServer();
+            if (statusCode.equals(Constants.SUCCESS)) {
+                Common.makeAlert(Alert.AlertType.INFORMATION, "Успех", "Соотрудник уволен");
+            } else {
+                Common.makeAlert(Alert.AlertType.WARNING, "Предупреждение", "Такого сотрудника не существует");
+            }
+        }
     }
 
     @FXML

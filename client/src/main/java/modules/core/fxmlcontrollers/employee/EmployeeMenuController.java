@@ -1,7 +1,6 @@
 package modules.core.fxmlcontrollers.employee;
 
 import java.io.IOException;
-import java.lang.constant.Constable;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
@@ -202,7 +201,7 @@ public class EmployeeMenuController {
         Session.SendMessageToServer(Constants.DELETE_EMPLOYEE);
         Session.SendMessageToServer(String.valueOf(Session.obj.getId()));
 
-        Common.makeAlert(Alert.AlertType.INFORMATION, "Успех", "Аккаунт успешно удален");
+        Common.makeAlert(Alert.AlertType.INFORMATION, "Успех", "Увольнение прошло успешно");
         
         Main.setRoot("fxml/start/mainWindow");
     }
@@ -210,7 +209,14 @@ public class EmployeeMenuController {
     @FXML
     void findTrainings(ActionEvent event) {
         if (findDateButton.getValue() != null) {
-            
+            String date = findDateButton.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+            ObservableList<Training> arr = FXCollections.observableArrayList();
+            for (Training p : listTrainings) {
+                if (p.getDate().equals(date)) {
+                    arr.add(p);
+                }
+            }
+            trainingTableView.setItems(arr);
         } else {
             trainingTableView.setItems(listTrainings);
         }

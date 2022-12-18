@@ -3,6 +3,8 @@ package modules.core.actions;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import com.mysql.cj.Session;
+
 import modules.core.Constants;
 import modules.core.controllers.*;
 import modules.core.models.*;
@@ -41,7 +43,9 @@ public class Actions {
                 PromoteEmployee();
             } else if (line.equals(Constants.INITIALIZE_MANAGER_WINDOW)) {
                 InitializeManagerWindow();
-            }
+            } else if (line.equals(Constants.FIRE_EMPLOYEE)) {
+                FireEmployee();
+            } 
             // TODO: handle invalid request
         }
     }
@@ -191,5 +195,12 @@ public class Actions {
         } else {
             con.SendMessageToClient(Constants.FAILURE);
         }
+    }
+
+    public void FireEmployee() {
+        int emplId = Integer.parseInt(con.GetMessageFromClient());
+        System.out.println(emplId);
+
+        con.SendMessageToClient(Constants.SUCCESS);
     }
 }
